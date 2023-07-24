@@ -14,37 +14,40 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: const Color(0xff764abc),
       ),
       drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            const UserAccountsDrawerHeader(
+        child: Center(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              const UserAccountsDrawerHeader(
                 decoration: BoxDecoration(color: Color(0xff764abc)),
                 currentAccountPicture: CircleAvatar(
                   backgroundColor: Colors.black,
                   backgroundImage: AssetImage('lib/assets/women_profile.jpg'),
                 ),
                 accountName: Text('Aleena'),
-                accountEmail: Text('aleena123@gmail.com')),
-            ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text('Home'),
-              onTap: () {
-                Navigator.pushNamed(context, HomeScreen.id);
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.next_plan_outlined),
-              title: const Text('Screen 2'),
-              onTap: () {
-                Navigator.pushNamed(context, SecondScreen.id);
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.logout),
-              title: const Text('Logout'),
-              onTap: () {},
-            )
-          ],
+                accountEmail: Text('aleena123@gmail.com'),
+              ),
+              ListTile(
+                leading: const Icon(Icons.home),
+                title: const Text('Home'),
+                onTap: () {
+                  Navigator.pushNamed(context, HomeScreen.id);
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.next_plan_outlined),
+                title: const Text('Screen 2'),
+                onTap: () {
+                  Navigator.pushNamed(context, SecondScreen.id);
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.logout),
+                title: const Text('Logout'),
+                onTap: () {},
+              )
+            ],
+          ),
         ),
       ),
       body: Center(
